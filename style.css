@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+.container {
+    width: 80%;
+    padding: 20px;
+}
+
+.container h2 {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+}
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.wrapper .box {
+    width: 100%;
+    position: relative;
+    padding: 20px;
+}
+
+.wrapper .box input {
+    width: 100%;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-bottom: 1px solid rgb(40, 205, 245);
+    transition: 0.4s linear;
+}
+
+.wrapper .box input:focus,
+.wrapper .box input:valid {
+    padding: 10px 10px;
+    /* background: rgb(40,205,245); */
+    box-shadow: 4px 2px 10px rgb(40, 205, 245);
+    margin-top: 10px;
+}
+
+.wrapper .box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: sans-serif;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.wrapper .box input:focus~label,
+.wrapper .box input:valid~label {
+    padding: 0;
+}
+
+.wrapper .box textarea {
+    width: 100%;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(40, 205, 245);
+    transition: 0.4s linear;
+    color: #fff;
+}
+
+.wrapper .box textarea:focus,
+.wrapper .box textarea:valid {
+    padding: 20px 10px;
+    /* background: rgb(40,205,245); */
+    margin-top: 20px;
+}
+
+.wrapper .box textarea:focus~label,
+.wrapper .box textarea:valid~label {
+    padding: 14px;
+}
+
+.container input[type="submit"] {
+    background: rgb(40, 205, 245);
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+
+
+
+@media (max-width: 350px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container h2 {
+        font-size: 1.8rem;
+    }
+
+    .container input[type="submit"] {
+        padding: 6px 10px;
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .wrapper .box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .wrapper .box input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .wrapper .box textarea {
+        font-size: 16px;
+    }
+}
